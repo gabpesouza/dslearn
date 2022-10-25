@@ -29,3 +29,21 @@ INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prer
 
 INSERT INTO tb_enrollment (enroll_Moment, refund_Moment, available, only_Update, user_id, offer_id) VALUES (TIMESTAMP WITH TIME ZONE '2021-05-23T20:50:05Z', null, true, false, 1, 1);
 INSERT INTO tb_enrollment (enroll_Moment, refund_Moment, available, only_Update, user_id, offer_id) VALUES (TIMESTAMP WITH TIME ZONE '2021-05-23T20:50:05Z', null, true, false, 2, 1);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 1', 1, 1);
+INSERT INTO tb_content (text_Content, video_Uri, id) VALUES ('Material de apoio', 'https://www.youtube.com/watch?v=FnaoovTg-sc&ab_channel=TodayonTwitch', 1);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 2', 2, 1);
+INSERT INTO tb_content (text_Content, video_Uri, id) VALUES (' ', 'https://www.youtube.com/watch?v=FnaoovTg-sc&ab_channel=TodayonTwitch', 2);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 3', 3, 1);
+INSERT INTO tb_content (text_Content, video_Uri, id) VALUES (' ', 'https://www.youtube.com/watch?v=FnaoovTg-sc&ab_channel=TodayonTwitch', 3);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa capitulo 1', 4, 1);
+INSERT INTO tb_task (description, question_Count, approval_Count, weight, due_Date, id) VALUES ('Desafio TDD', 15, 8, 10.0, TIMESTAMP WITH TIME ZONE '2022-05-23T16:30:30Z', 4);
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
+
+
+

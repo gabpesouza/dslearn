@@ -2,10 +2,13 @@ package com.devsuperior.dslearnbds.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
@@ -23,6 +26,9 @@ public class Enrollment implements Serializable {
 	
 	@EmbeddedId
 	private EnrollmentPK id = new EnrollmentPK();
+	
+	@ManyToMany(mappedBy = "enrollmentsDone")
+	private Set<Lesson> lessonsDone = new HashSet<>();
 
 	public Enrollment(Instant enrollMoment, Instant refundMoment, boolean available, boolean onlyUpdate,
 			User user, Offer offer) {
