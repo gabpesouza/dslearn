@@ -2,6 +2,8 @@ INSERT INTO tb_user (name, email, password) VALUES ('Alex', 'alex@gmail.com', '$
 INSERT INTO tb_user (name, email, password) VALUES ('Maria', 'maria@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
 INSERT INTO tb_user (name, email, password) VALUES ('Bob', 'bob@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
 
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Tarefa avaliada', TIMESTAMP WITH TIME ZONE '2022-10-22T15:30:30Z', false, ' ', 1);
+
 
 INSERT INTO tb_role (authority) VALUES ('ROLE_STUDENT');
 INSERT INTO tb_role (authority) VALUES ('ROLE_INSTRUCTOR');
@@ -30,6 +32,7 @@ INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prer
 INSERT INTO tb_enrollment (enroll_Moment, refund_Moment, available, only_Update, user_id, offer_id) VALUES (TIMESTAMP WITH TIME ZONE '2021-05-23T20:50:05Z', null, true, false, 1, 1);
 INSERT INTO tb_enrollment (enroll_Moment, refund_Moment, available, only_Update, user_id, offer_id) VALUES (TIMESTAMP WITH TIME ZONE '2021-05-23T20:50:05Z', null, true, false, 2, 1);
 
+
 INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 1', 1, 1);
 INSERT INTO tb_content (text_Content, video_Uri, id) VALUES ('Material de apoio', 'https://www.youtube.com/watch?v=FnaoovTg-sc&ab_channel=TodayonTwitch', 1);
 
@@ -44,6 +47,9 @@ INSERT INTO tb_task (description, question_Count, approval_Count, weight, due_Da
 
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
+
+INSERT INTO tb_deliver (uri, moment, status, feed_Back, lesson_id, user_id, offer_id) VALUES ('https://github.com/gabpesouza', TIMESTAMP WITH TIME ZONE '2022-05-23T23:30:30Z', 1, 'Ficou muito bom, parabéns', 4, 1, 1);
+
 
 
 
