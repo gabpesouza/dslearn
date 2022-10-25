@@ -1,5 +1,6 @@
 package com.devsuperior.dslearnbds.entities;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -10,7 +11,9 @@ import javax.persistence.Table;
 import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
 @Entity
 @Table(name = "tb_enrollment")
-public class Enrollment {
+public class Enrollment implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant enrollMoment;
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
